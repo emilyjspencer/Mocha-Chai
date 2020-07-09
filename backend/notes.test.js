@@ -3,13 +3,13 @@ import Notes from './notes.js';
 
 describe('Notes', () => {
 
-  it('has no notes by default', () => {
-    let noteApp = new Notes;
-    expect(noteApp.notes).to.be.empty;
-  });
+  let noteApp;
+
+  beforeEach(() => {
+    noteApp = new Notes();
+  })
 
   it('adds a new note to the notes array', () =>  {
-    let noteApp = new Notes;
     noteApp.createNote('Finish learning Mocha and Chai');
     noteApp.createNote('Learn how to integrate React with Rails')
     noteApp.createNote('Build the rest of the Meditation app');
@@ -17,7 +17,6 @@ describe('Notes', () => {
   });
 
   it('the note has an id and content', () => {
-    let noteApp = new Notes;
     noteApp.createNote('Finish learning Mocha and Chai');
     noteApp.createNote('Learn how to integrate React with Rails')
     noteApp.createNote('Build the rest of the Meditation app');
@@ -26,7 +25,6 @@ describe('Notes', () => {
   });
 
   it('the note has an id, content, date and priority number', () => {
-    let noteApp = new Notes;
     noteApp.createNote('Finish learning Mocha and Chai', 9);
     noteApp.createNote('Learn how to integrate React with Rails', 4)
     noteApp.createNote('Build the rest of the Meditation app', 6);
