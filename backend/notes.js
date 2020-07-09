@@ -1,15 +1,22 @@
-
-
-
-
+import fs from 'fs';
+//import path from 'path';
 
 class Notes {
-    constructor() {
-      this.notes = []
-    }
+    constructor(filepath) {
+      this.filepath = filepath
+      this.notes = filepath ? this.readFromJson() : []
+      //this.notes = []
+    };
+
+    readFromJson() {
+      return JSON.parse(fs.readFileSync(
+        __dirname + this.filepath, "utf8", (err, data) => {
+        if (err) throw err
+      })
+      )
+     }
 
   
-
     createNote = (content, priorityNumber) => {
       let noteItem = {
         id: newId(this.notes),
@@ -38,6 +45,7 @@ class Notes {
 
   }
 
+  
   const newId = (array) => {
     if (array.length > 0) {
       return array[array.length - 1].id + 1;
@@ -46,6 +54,10 @@ class Notes {
     };
    };
 
+   
+  
+   
+  
   
 
 export default Notes;

@@ -67,5 +67,11 @@ describe('Notes', () => {
     noteApp.editNote(2, 'editNote')
     expect(noteApp.get(2).content).to.equal('editNote');
   });
+
+  it('reads from the given file path', () => {
+    let testFile = new Notes('/json/testNotes.json');
+    expect(testFile.notes.length).to.equal(1)
+  });
+
 });
 
