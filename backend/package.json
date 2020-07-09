@@ -11,8 +11,8 @@
     "mocha": "^8.0.1"
   },
   "scripts": {
-    "test": "mocha -r esm app.test.js",
-    "start": "node -r esm app.js"
+    "test": "mocha -r esm notes.test.js",
+    "start": "node -r esm notes.js"
   },
   "repository": {
     "type": "git",
