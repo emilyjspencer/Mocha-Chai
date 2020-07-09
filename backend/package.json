@@ -1,0 +1,32 @@
+{
+  "name": "mochachaiplay",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha -r esm app.test.js",
+    "start": "node -r esm app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilyjspencer/mocha-chai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilyjspencer/mocha-chai/issues"
+  },
+  "homepage": "https://github.com/emilyjspencer/mocha-chai#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "description": ""
+}
