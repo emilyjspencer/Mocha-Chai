@@ -18,6 +18,12 @@ class Notes {
       return this.notes[id];
     }
 
+    delete(id) {
+      let found = this.notes[id]
+      console.log(found)
+      return this.notes.pop(found);
+    }
+
   }
 
 export default Notes;

@@ -26,8 +26,13 @@ describe('Notes', () => {
     expect(noteApp.notes[1].date).not.to.equal(undefined);
   });
 
-  it("gets a note", () => {
+  it('gets a note', () => {
     expect(noteApp.get(1).content).to.equal('Learn how to integrate React with Rails')
+  });
+
+  it('deletes a note', () =>  {
+    noteApp.delete(2)
+    expect(noteApp.notes.length).to.equal(2);
   });
 });
 
