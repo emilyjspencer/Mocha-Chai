@@ -31,8 +31,13 @@ describe('Notes', () => {
   });
 
   it('deletes a note', () =>  {
-    noteApp.delete(2)
+    noteApp.delete(2);
     expect(noteApp.notes.length).to.equal(2);
+  });
+
+  it('edits a note', () => {
+    noteApp.editNote(1, 'Learn React Native');
+    expect(noteApp.notes[1].content).to.equal('Learn React Native');
   });
 });
 

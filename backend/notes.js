@@ -20,9 +20,13 @@ class Notes {
 
     delete(id) {
       let found = this.notes[id]
-      console.log(found)
       return this.notes.pop(found);
     }
+
+    editNote(id, newContent) {
+      this.notes[id].content = newContent;
+      return this.notes[id];
+    };
 
   }
 
