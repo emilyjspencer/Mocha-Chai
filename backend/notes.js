@@ -3,10 +3,12 @@ class Notes {
       this.notes = []
     }
 
-    createNote = (content) => {
+    createNote = (content, priorityNumber) => {
       let noteItem = {
         id: this.notes.length,
-        content: content
+        content: content,
+        priorityNumber: priorityNumber,
+        date: new Date()
       }
       this.notes.push(noteItem);
       return this.notes;
