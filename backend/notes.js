@@ -13,6 +13,11 @@ class Notes {
       this.notes.push(noteItem);
       return this.notes;
     }
+
+    get = (id) => {
+      return this.notes[id];
+    }
+
   }
 
 export default Notes;

@@ -25,5 +25,9 @@ describe('Notes', () => {
     expect(noteApp.notes[2].priorityNumber).to.equal(6);
     expect(noteApp.notes[1].date).not.to.equal(undefined);
   });
+
+  it("gets a note", () => {
+    expect(noteApp.get(1).content).to.equal('Learn how to integrate React with Rails')
+  });
 });
 
