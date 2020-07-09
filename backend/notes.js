@@ -3,8 +3,13 @@ class Notes {
       this.notes = []
     }
 
-    createNote = (note) => {
-      this.notes.push(note);
+    createNote = (content) => {
+      let noteItem = {
+        id: this.notes.length,
+        content: content
+      }
+      this.notes.push(noteItem);
+      return this.notes;
     }
   }
 
