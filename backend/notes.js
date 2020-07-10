@@ -1,11 +1,10 @@
 import fs from 'fs';
-//import path from 'path';
+
 
 class Notes {
     constructor(filepath) {
       this.filepath = filepath
       this.notes = filepath ? this.readFromJson() : []
-      //this.notes = []
     };
 
     readFromJson() {
